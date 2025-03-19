@@ -592,6 +592,10 @@ void FirmwarePlugin::_updateFlightModeList(FlightModeList &flightModeList){
         qDebug() << Q_FUNC_INFO << "Flight Mode: " << flightMode.mode_name << " Custom Mode: " << flightMode.custom_mode;
         _addNewFlightMode(flightMode);
     }
+
+    for (auto &flightMode : _flightModeList){
+        qDebug() << Q_FUNC_INFO << "Flight Mode: " << flightMode.mode_name << " Custom Mode: " << flightMode.custom_mode;
+    }
 }
 
 void FirmwarePlugin::_addNewFlightMode(FirmwareFlightMode &newFlightMode)
