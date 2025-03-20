@@ -86,8 +86,8 @@ void StandardModes::gotMessage(MAV_RESULT result, const mavlink_message_t &messa
             availableModes.custom_mode,
             !cannotBeSet,
             advanced,
-            false,  // fixed wing
-            false   // multi-rotor
+            true,  // fixed wing - Since we don't know at this point we assume fixed wing support
+            true   // multi-rotor - Since we don't know at this point we assume multi-rotor support as well
         };
 
         if (availableModes.mode_index >= availableModes.number_modes) { // We are done
